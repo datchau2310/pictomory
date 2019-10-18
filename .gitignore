@@ -1,0 +1,5 @@
+node_modules/
+.tmp/
+coverage/
+build/dist/
+npm-debug.log

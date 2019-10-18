@@ -1,0 +1,119 @@
+.container_wp{
+    display: block;
+    max-width: 1170px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    @media only screen and (max-width: 1024px) {
+        max-width: 970px;
+    }
+}
+.section_page{
+    padding: 50px 0;
+    background: $color_grey_light;
+}
+.section_title{
+    text-align: center;
+    padding-bottom: 45px;
+    h4{
+        margin-bottom: 15px;
+        font-size: $font_size_E;
+        font-weight: $fontWeight_title;
+    }
+    .icon_title{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before{
+            content: '';
+            display: inline-block;
+            width: 50px;
+            height: 1px;
+            background: $color_grey;
+        }
+        &::after{
+            content: '';
+            display: inline-block;
+            width: 50px;
+            height: 1px;
+            background: $color_grey;
+        }
+        img{
+            padding: 0 15px;
+        }
+    }
+}
+.box_review_gallery{
+    display: flex;
+    flex-direction: row;
+    .review_info{
+        display: flex;
+        flex-direction: column;
+        .name{
+            font-size: $font_size_B;
+            font-weight: $fontWeight_title;
+            margin-bottom: 5px;
+        }
+        .rate {
+            float: left;
+            height: 46px;
+            &:not(:checked) {
+                > input {
+                    position: absolute;
+                    visibility: hidden;
+                }
+                > label {
+                    float: right;
+                    width: 1em;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    cursor: pointer;
+                    font-size: 24px;
+                    color: #ccc;
+                    &:before {
+                        content: '★ ';
+                    }
+                    &:hover {
+                        color: #ffc700;
+                        &~label {
+                            color: #ffc700;
+                        }
+                    }
+                }
+            }
+            > input {
+                &:checked {
+                    &~label {
+                        color: #ffc700;
+                        &:hover {
+                            color: #c59b08;
+                            &~label {
+                                color: #c59b08;
+                            }
+                        }
+                    }
+                    &+label {
+                        &:hover {
+                            color: #c59b08;
+                            &~label {
+                                color: #c59b08;
+                            }
+                        }
+                    }
+                }
+            }
+            >label {
+                &:hover {
+                    &~input {
+                        &:checked {
+                            &~label {
+                                color: #c59b08;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

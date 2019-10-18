@@ -1,0 +1,57 @@
+@mixin btn01 {
+    padding: 1em 2em;
+    background: $color_black;
+    color: $color_white;
+    outline: none;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all .3s ease-in-out 0s;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        background: $color_blue;
+    }
+}
+@mixin btn02 {
+    padding: 1em 2em;
+    background: $color_blue;
+    color: $color_white;
+    outline: none;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all .3s ease-in-out 0s;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        background: $color_black;
+    }
+}
+@mixin btn03 {
+    padding: 1em 2em;
+    background: $color_grey;
+    color: $color_brown;
+    outline: none;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all .3s ease-in-out 0s;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        background: $color_black;
+        color: $color_white;
+    }
+}
+@mixin btn04 {
+    padding: 1em 2em;
+    background: $color_black;
+    color: $color_white;
+    outline: none;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all .3s ease-in-out 0s;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        background: $color_blue;
+    }
+}

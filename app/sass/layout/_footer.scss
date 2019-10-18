@@ -1,0 +1,88 @@
+.main_footer{
+    background: #2E2E2E;
+    padding: 4.2% 0;
+    @media only screen and (max-width: 1024px) {
+        padding: 2em 1em;
+    }
+    .box_wp_footer{
+        display: flex;
+        flex-direction: row;
+        @media only screen and (max-width: 480px) {
+            flex-direction: column;
+        }
+        .box_footer{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            width: 100%;
+            @media only screen and (max-width: 480px) {
+                &:first-child{
+                    padding-bottom: 20px;
+                }
+            }
+            .list_link{
+                display: flex;
+                flex-direction: row;
+                padding-bottom: 30px;
+                border-bottom: 1px solid $color_brown;
+                width: 100%;
+                @media only screen and (max-width: 480px) {
+                    padding-bottom: 20px;
+                }
+                .item_link{
+                    padding-right: 10px;
+                    padding-left: 10px;
+                    border-right: 1px solid $color_brown;
+                    &:first-child{
+                        padding-left: 0;
+                    }
+                    &:last-child{
+                        border-right: none;
+                    }
+                    a{
+                        color: $color_blue;
+                        font-weight: $fontWeight_link;
+                        font-size: $font_size_D;
+                        @media only screen and (max-width: 480px) {
+                            font-size: $font_size_B;
+                        }
+                        &:hover,&:focus{
+                            color: $color_brown;
+                            transition: all .3s ease-in-out 0s;
+                        }
+                    }
+                }
+            }
+            .information_footer{
+                padding-top: 30px;
+                @media only screen and (max-width: 480px) {
+                    padding-top: 20px;
+                }
+                p{
+                    color: #9B9494;
+                    padding-bottom: 15px;
+                    font-size: 18px;
+                    line-height: 25px;
+                    @media only screen and (max-width: 480px) {
+                        font-size: $font_size_A;
+                    }
+                }
+            }
+            .contact_footer{
+                padding-left: 50px;
+                @media only screen and (max-width: 480px) {
+                    padding:0;
+                }
+                p{
+                    color: $color_brown;
+                    padding-bottom: 15px;
+                    font-size: $font_size_C;
+                    line-height: 25px;
+                    @media only screen and (max-width: 480px) {
+                        font-size: $font_size_A;
+                    }
+                }
+            }
+        }
+    }
+}
