@@ -62,3 +62,10 @@ $('.multiple_items').slick({
     slidesToShow: 3,
     slidesToScroll: 3
 });
+
+// slider sub main
+$('.list_detail_gallery').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 4
+});

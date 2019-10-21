@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="dist/slick/slick.css">
     <link rel="stylesheet" href="dist/slick/slick-theme.css">
     <link rel="stylesheet" href="dist/fontawesome-free-5.11.2-web/css/all.css">
+    <link rel="stylesheet" href="dist/datetime/jquery-ui.css">
+    <link rel="stylesheet" href="dist/datetime/jquery.timepicker.min.css">
     <title>Pictomory</title>
 </head>
 <body>
@@ -37,24 +39,35 @@
                         <form action="">
                             <div class="input_wrapper">
                                 <label for="">Location</label>
-                                <select name="" id="" class="select_box form_input">
-                                    <option value="">Korea</option>
-                                </select>
+                                <label for="" class="select_box_wrapper">
+                                    <select name="" id="" class="select_box form_input">
+                                        <option value="">Korea</option>
+                                    </select>
+                                </label>
                             </div>
                             <div class="input_wrapper">
                                 <div class="box_schedule">
                                     <div class="list_item_schedule">
                                         <div class="item_box_schedule">
-                                            <label for="">Location</label>
-                                            <input type="text" class="form_input">
+                                            <label for="">Date</label>
+                                            <label for="" class="input_date_time">
+                                                <i class="icon_append icon_calendar"></i>
+                                                <input type="text" class="form_input" id="datepicker">
+                                            </label>
                                         </div>
                                         <div class="item_box_schedule">
-                                            <label for="">Location</label>
-                                            <input type="text" class="form_input">
+                                            <label for="">From</label>
+                                            <label for="" class="input_date_time">
+                                                <i class="icon_append icon_clock"></i>
+                                                <input type="text" class="form_input timepicker_from" name="timepicker_from">
+                                            </label>
                                         </div>
                                         <div class="item_box_schedule">
-                                            <label for="">Location</label>
-                                            <input type="text" class="form_input">
+                                            <label for="">To</label>
+                                            <label for="" class="input_date_time">
+                                                <i class="icon_append icon_clock"></i>
+                                                <input type="text" class="form_input timepicker_to" name="timepicker_to">
+                                            </label>
                                         </div>
                                     </div>
                                 </div>  
@@ -63,13 +76,18 @@
                                 <div class="box_amount_theme">
                                     <div class="item_people">
                                         <label for="">People</label>
-                                        <input type="text" class="form_input">
+                                        <label for="" class="input_date_time">
+                                            <i class="icon_append icon_people"></i>
+                                            <input type="text" class="form_input" value="12">
+                                        </label>
                                     </div>
                                     <div class="item_theme">
                                         <label for="">Theme</label>
-                                        <select name="" id="" class="select_box form_input">
-                                            <option value="">Korea</option>
-                                        </select>
+                                        <label for="" class="select_box_wrapper">
+                                            <select name="" id="" class="select_box form_input">
+                                                <option value="">Korea</option>
+                                            </select>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
@@ -208,8 +226,42 @@
                                     <label for="star1" title="text">1 star</label>
                                 </div>
                             </div>
-                            <div class="navigation_slide">
-                                
+                        </div>
+                    </div>
+                    <div class="item_gallery">
+                        <div class="box_gallery_slider">
+                            <div class="slider slider_single">
+                                <div class="item_slider_single"><img src="images/background/background_1.png" alt=""></div>
+                                <div class="item_slider_single"><img src="images/background/background_2.png" alt=""></div>
+                                <div class="item_slider_single"><img src="images/background/background_3.png" alt=""></div>
+                                <div class="item_slider_single"><img src="images/background/background_4.png" alt=""></div>
+                                <div class="item_slider_single"><img src="images/background/background_5.png" alt=""></div>
+                                <div class="item_slider_single"><img src="images/background/background_6.png" alt=""></div>
+                            </div>
+                            <div class="slider slider_nav">
+                                <div class="item_slider_nav"><div class="box_img_slider"><img src="images/background/background_1.png" alt=""></div></div>
+                                <div class="item_slider_nav"><div class="box_img_slider"><img src="images/background/background_2.png" alt=""></div></div>
+                                <div class="item_slider_nav"><div class="box_img_slider"><img src="images/background/background_3.png" alt=""></div></div>
+                                <div class="item_slider_nav"><div class="box_img_slider"><img src="images/background/background_4.png" alt=""></div></div>
+                                <div class="item_slider_nav"><div class="box_img_slider"><img src="images/background/background_5.png" alt=""></div></div>
+                                <div class="item_slider_nav"><div class="box_img_slider"><img src="images/background/background_6.png" alt=""></div></div>
+                            </div>
+                        </div>
+                        <div class="box_review_gallery">
+                            <div class="review_info">
+                                <span class="name">Christina Aguilera</span>
+                                <div class="rate">
+                                    <input type="radio" id="star5" name="rate" value="5" />
+                                    <label for="star5" title="text">5 stars</label>
+                                    <input type="radio" id="star4" name="rate" value="4" />
+                                    <label for="star4" title="text">4 stars</label>
+                                    <input type="radio" id="star3" name="rate" value="3" />
+                                    <label for="star3" title="text">3 stars</label>
+                                    <input type="radio" id="star2" name="rate" value="2" />
+                                    <label for="star2" title="text">2 stars</label>
+                                    <input type="radio" id="star1" name="rate" value="1" />
+                                    <label for="star1" title="text">1 star</label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -248,9 +300,6 @@
                                     <label for="star1" title="text">1 star</label>
                                 </div>
                             </div>
-                            <div class="navigation_slide">
-                                
-                            </div>
                         </div>
                     </div>
                     <div class="item_gallery">
@@ -287,49 +336,6 @@
                                     <input type="radio" id="star1" name="rate" value="1" />
                                     <label for="star1" title="text">1 star</label>
                                 </div>
-                            </div>
-                            <div class="navigation_slide">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item_gallery">
-                        <div class="box_gallery_slider">
-                            <div class="slider slider_single">
-                                <div class="item_slider_single"><img src="images/background/background_1.png" alt=""></div>
-                                <div class="item_slider_single"><img src="images/background/background_2.png" alt=""></div>
-                                <div class="item_slider_single"><img src="images/background/background_3.png" alt=""></div>
-                                <div class="item_slider_single"><img src="images/background/background_4.png" alt=""></div>
-                                <div class="item_slider_single"><img src="images/background/background_5.png" alt=""></div>
-                                <div class="item_slider_single"><img src="images/background/background_6.png" alt=""></div>
-                            </div>
-                            <div class="slider slider_nav">
-                                <div class="item_slider_nav"><div class="box_img_slider"><img src="images/background/background_1.png" alt=""></div></div>
-                                <div class="item_slider_nav"><div class="box_img_slider"><img src="images/background/background_2.png" alt=""></div></div>
-                                <div class="item_slider_nav"><div class="box_img_slider"><img src="images/background/background_3.png" alt=""></div></div>
-                                <div class="item_slider_nav"><div class="box_img_slider"><img src="images/background/background_4.png" alt=""></div></div>
-                                <div class="item_slider_nav"><div class="box_img_slider"><img src="images/background/background_5.png" alt=""></div></div>
-                                <div class="item_slider_nav"><div class="box_img_slider"><img src="images/background/background_6.png" alt=""></div></div>
-                            </div>
-                        </div>
-                        <div class="box_review_gallery">
-                            <div class="review_info">
-                                <span class="name">Christina Aguilera</span>
-                                <div class="rate">
-                                    <input type="radio" id="star5" name="rate" value="5" />
-                                    <label for="star5" title="text">5 stars</label>
-                                    <input type="radio" id="star4" name="rate" value="4" />
-                                    <label for="star4" title="text">4 stars</label>
-                                    <input type="radio" id="star3" name="rate" value="3" />
-                                    <label for="star3" title="text">3 stars</label>
-                                    <input type="radio" id="star2" name="rate" value="2" />
-                                    <label for="star2" title="text">2 stars</label>
-                                    <input type="radio" id="star1" name="rate" value="1" />
-                                    <label for="star1" title="text">1 star</label>
-                                </div>
-                            </div>
-                            <div class="navigation_slide">
-                                
                             </div>
                         </div>
                     </div>
@@ -346,7 +352,30 @@
             </div>
             <div class="bg_main_page_section_3">
                 <div class="container_wp">
-                    
+                    <div class="step_regis">
+                        <ul class="regis_nav_step">
+                            <li class="step_item">
+                                <img src="images/icon/icon_search.png" alt="">
+                                <span>Search</span>
+                            </li>
+                            <li class="step_item">
+                                <img src="images/icon/icon_connect.png" alt="">
+                                <span>Connect</span>
+                            </li>
+                            <li class="step_item">
+                                <img src="images/icon/icon_capture.png" alt="">
+                                <span>Capture</span>
+                            </li>
+                            <li class="step_item">
+                                <img src="images/icon/icon_receive.png" alt="">
+                                <span>Review</span>
+                            </li>
+                            <li class="step_item">
+                                <img src="images/icon/icon_review.png" alt="">
+                                <span>Capture</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -488,4 +517,7 @@
 <script src="dist/jquery-3.4.1.min.js"></script>
 <script src="dist/slick/slick.js"></script>
 <script src="js/slider.js"></script>
+<script src="dist/datetime/jquery-ui.js"></script>
+<script src="dist/datetime/jquery.timepicker.min.js"></script>
+<script src="js/date_time.js"></script>
 </html>

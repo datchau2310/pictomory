@@ -88,11 +88,27 @@
 }
 .slick-prev:before
 {
-    content: '←';
+    content: '';
+    background: url('../../images/icon/arrow_left.png');
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 25%;
+    left: 25%;
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '→';
+    content: '';
+    background: url('../../images/icon/arrow_left.png');
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 25%;
+    left: 25%;
 }
 
 .slick-next
@@ -106,11 +122,27 @@
 }
 .slick-next:before
 {
-    content: '→';
+    content: '';
+    background: url('../../images/icon/arrow_right.png');
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 25%;
+    left: 25%;
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '←';
+    content: '';
+    background: url('../../images/icon/arrow_right.png');
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 25%;
+    left: 25%;
 }
 
 /* Dots */

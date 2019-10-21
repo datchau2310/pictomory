@@ -1,0 +1,150 @@
+.sub_main{
+    .breakcrum{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 50px;
+        img{
+            padding-right: 10px;
+        }
+        .breakcrum_title{
+            font-weight: 500;
+            font-size: $font_size_B;
+            padding-left: 10px;
+        }
+    }
+    .box_detail{
+        .box_list_detail{
+            margin-bottom: 50px;
+            .box_item_detail{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 15px;
+                .box_info{
+                    .name{
+                        font-size: $font_size_A;
+                        font-weight: $fontWeight_title;
+                        padding-right: 15px;
+                    }
+                    .price{
+                        font-size: $font_size_C;
+                        font-weight: $fontWeight_title;
+                    }
+                }
+                .box_review{
+                    .rate {
+                        float: left;
+                        height: 20px;
+                        &:not(:checked) {
+                            > input {
+                                position: absolute;
+                                visibility: hidden;
+                            }
+                            > label {
+                                float: right;
+                                width: 1em;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                cursor: pointer;
+                                font-size: 24px;
+                                color: #ccc;
+                                &:before {
+                                    content: '★ ';
+                                }
+                                &:hover {
+                                    color: #ffc700;
+                                    &~label {
+                                        color: #ffc700;
+                                    }
+                                }
+                            }
+                        }
+                        > input {
+                            &:checked {
+                                &~label {
+                                    color: #ffc700;
+                                    &:hover {
+                                        color: #c59b08;
+                                        &~label {
+                                            color: #c59b08;
+                                        }
+                                    }
+                                }
+                                &+label {
+                                    &:hover {
+                                        color: #c59b08;
+                                        &~label {
+                                            color: #c59b08;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        >label {
+                            &:hover {
+                                &~input {
+                                    &:checked {
+                                        &~label {
+                                            color: #c59b08;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .box_detail_gallery{ 
+                background: #fff;
+                .list_detail_gallery{
+                    .item_detail_gallery{
+                        .item_wrapper_img{
+                            padding: 15px;
+                            img{
+                                object-fit: cover;
+                                width: 100%;
+                            }
+                        }
+                    } 
+                    .slick-next{
+                        right: 20px;
+                    }
+                    .slick-prev {
+                        left: 20px;
+                        &::before{
+                            left: 20%;
+                        }
+                    }
+                    .slick-next,.slick-prev{
+                        border: 1px solid #2E2E2E;
+                        width: 30px;
+                        height: 30px;
+                        background: #FFFFFF;
+                        z-index: 12;
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+    .load_more{
+        display: flex;
+        justify-content: center;
+        .wrapper_btn{
+            padding: 1em 2em;
+            border: 1px solid $color_black;
+            background: $color_white;
+            color: $color_black;
+            outline: none;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: all .3s ease-in-out 0s;
+            cursor: pointer;
+            &:hover{
+                background: $color_black;
+                color: $color_white;
+            }
+        }
+    }
+}

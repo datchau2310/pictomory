@@ -34,6 +34,19 @@ label{
     padding-bottom: 5px;
     font-weight: $fontWeight_title;
 }
+select {
+	width: 100%;
+	font-size: 16px;
+	color: #3F3F3F;
+
+	/* Here's the code we need */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	 -o-appearance: none;
+		appearance: none;
+}
+
 .wrapper{
     position: relative;
     z-index: 20;
@@ -41,4 +54,13 @@ label{
 }
 .btn_search{
     @include btn01();
+}
+.icon_calendar{
+    background: url('../../images/icon/date_time.png');
+}
+.icon_clock{
+    background: url('../../images/icon/clock.png');
+}
+.icon_people{
+    background: url('../../images/icon/people.png');
 }

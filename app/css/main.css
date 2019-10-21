@@ -68,6 +68,17 @@ label {
   padding-bottom: 5px;
   font-weight: 600; }
 
+select {
+  width: 100%;
+  font-size: 16px;
+  color: #3F3F3F;
+  /* Here's the code we need */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
+
 .wrapper {
   position: relative;
   z-index: 20;
@@ -85,6 +96,15 @@ label {
   cursor: pointer; }
   .btn_search:hover {
     background: #00AEF0; }
+
+.icon_calendar {
+  background: url("../../images/icon/date_time.png"); }
+
+.icon_clock {
+  background: url("../../images/icon/clock.png"); }
+
+.icon_people {
+  background: url("../../images/icon/people.png"); }
 
 .container_wp {
   display: block;
@@ -215,7 +235,7 @@ label {
             height: 1px; }
 
 .main_footer {
-  background: #2E2E2E;
+  background: #232336;
   padding: 4.2% 0; }
   @media only screen and (max-width: 1024px) {
     .main_footer {
@@ -294,6 +314,35 @@ label {
   border-radius: 3px;
   padding: 0 .75em; }
 
+.input_date_time {
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+  .input_date_time .icon_append {
+    content: '';
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    line-height: 29px;
+    text-align: center; }
+
+.select_box_wrapper {
+  position: relative; }
+  .select_box_wrapper::after {
+    content: '';
+    position: absolute;
+    display: block;
+    background: url(../../images/icon/arrow_down.png);
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    right: 15px;
+    top: 15px; }
+
 .main_page_section_1 {
   background-image: url("../../images/background/background_header.png");
   height: 537px;
@@ -306,11 +355,12 @@ label {
       right: 30px;
       width: 423px;
       height: 380px;
-      position: absolute; }
+      position: absolute;
+      opacity: 0.8; }
       .main_page_section_1 .box_search_wrapper .box_search_homepage form {
         padding: 30px; }
         .main_page_section_1 .box_search_wrapper .box_search_homepage form .input_wrapper {
-          padding-bottom: 30px;
+          padding-bottom: 25px;
           display: flex;
           flex-direction: column; }
           .main_page_section_1 .box_search_wrapper .box_search_homepage form .input_wrapper .box_schedule {
@@ -389,7 +439,40 @@ label {
   background-image: url("../../images/background/background_section_3.png");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center; }
+  .main_page_section_3 .bg_main_page_section_3 .step_regis {
+    position: relative; }
+    .main_page_section_3 .bg_main_page_section_3 .step_regis::before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: #fff;
+      opacity: 0.63;
+      top: 50%; }
+    .main_page_section_3 .bg_main_page_section_3 .step_regis .regis_nav_step {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      .main_page_section_3 .bg_main_page_section_3 .step_regis .regis_nav_step .step_item {
+        display: flex;
+        flex-direction: column;
+        width: 164px;
+        height: 164px;
+        text-align: center;
+        position: relative;
+        justify-content: center;
+        border-radius: 50%;
+        background: #fff;
+        opacity: 1; }
+        .main_page_section_3 .bg_main_page_section_3 .step_regis .regis_nav_step .step_item img {
+          width: 58px;
+          height: 58px;
+          margin: 0 auto;
+          margin-bottom: 5px; }
 
 .main_page_section_4 .multiple_items .item_multiple_items {
   text-align: center; }
@@ -405,5 +488,103 @@ label {
     margin: 0 auto;
     object-fit: cover; }
 
-.main_page_section_4 .multiple_items .slick-next::before, .main_page_section_4 .multiple_items .slick-prev::before {
-  font-size: 40px; }
+.main_page_section_4 .multiple_items .slick-next, .main_page_section_4 .multiple_items .slick-prev {
+  border: 1px solid #2E2E2E;
+  width: 40px;
+  height: 40px; }
+
+.sub_main .breakcrum {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 50px; }
+  .sub_main .breakcrum img {
+    padding-right: 10px; }
+  .sub_main .breakcrum .breakcrum_title {
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 10px; }
+
+.sub_main .box_detail .box_list_detail {
+  margin-bottom: 50px; }
+  .sub_main .box_detail .box_list_detail .box_item_detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px; }
+    .sub_main .box_detail .box_list_detail .box_item_detail .box_info .name {
+      font-size: 14px;
+      font-weight: 600;
+      padding-right: 15px; }
+    .sub_main .box_detail .box_list_detail .box_item_detail .box_info .price {
+      font-size: 18px;
+      font-weight: 600; }
+    .sub_main .box_detail .box_list_detail .box_item_detail .box_review .rate {
+      float: left;
+      height: 20px; }
+      .sub_main .box_detail .box_list_detail .box_item_detail .box_review .rate:not(:checked) > input {
+        position: absolute;
+        visibility: hidden; }
+      .sub_main .box_detail .box_list_detail .box_item_detail .box_review .rate:not(:checked) > label {
+        float: right;
+        width: 1em;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 24px;
+        color: #ccc; }
+        .sub_main .box_detail .box_list_detail .box_item_detail .box_review .rate:not(:checked) > label:before {
+          content: '★ '; }
+        .sub_main .box_detail .box_list_detail .box_item_detail .box_review .rate:not(:checked) > label:hover {
+          color: #ffc700; }
+          .sub_main .box_detail .box_list_detail .box_item_detail .box_review .rate:not(:checked) > label:hover ~ label {
+            color: #ffc700; }
+      .sub_main .box_detail .box_list_detail .box_item_detail .box_review .rate > input:checked ~ label {
+        color: #ffc700; }
+        .sub_main .box_detail .box_list_detail .box_item_detail .box_review .rate > input:checked ~ label:hover {
+          color: #c59b08; }
+          .sub_main .box_detail .box_list_detail .box_item_detail .box_review .rate > input:checked ~ label:hover ~ label {
+            color: #c59b08; }
+      .sub_main .box_detail .box_list_detail .box_item_detail .box_review .rate > input:checked + label:hover {
+        color: #c59b08; }
+        .sub_main .box_detail .box_list_detail .box_item_detail .box_review .rate > input:checked + label:hover ~ label {
+          color: #c59b08; }
+      .sub_main .box_detail .box_list_detail .box_item_detail .box_review .rate > label:hover ~ input:checked ~ label {
+        color: #c59b08; }
+  .sub_main .box_detail .box_list_detail .box_detail_gallery {
+    background: #fff; }
+    .sub_main .box_detail .box_list_detail .box_detail_gallery .list_detail_gallery .item_detail_gallery .item_wrapper_img {
+      padding: 15px; }
+      .sub_main .box_detail .box_list_detail .box_detail_gallery .list_detail_gallery .item_detail_gallery .item_wrapper_img img {
+        object-fit: cover;
+        width: 100%; }
+    .sub_main .box_detail .box_list_detail .box_detail_gallery .list_detail_gallery .slick-next {
+      right: 20px; }
+    .sub_main .box_detail .box_list_detail .box_detail_gallery .list_detail_gallery .slick-prev {
+      left: 20px; }
+      .sub_main .box_detail .box_list_detail .box_detail_gallery .list_detail_gallery .slick-prev::before {
+        left: 20%; }
+    .sub_main .box_detail .box_list_detail .box_detail_gallery .list_detail_gallery .slick-next, .sub_main .box_detail .box_list_detail .box_detail_gallery .list_detail_gallery .slick-prev {
+      border: 1px solid #2E2E2E;
+      width: 30px;
+      height: 30px;
+      background: #FFFFFF;
+      z-index: 12;
+      opacity: 0.8; }
+
+.sub_main .load_more {
+  display: flex;
+  justify-content: center; }
+  .sub_main .load_more .wrapper_btn {
+    padding: 1em 2em;
+    border: 1px solid #2E2E2E;
+    background: #fff;
+    color: #2E2E2E;
+    outline: none;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all .3s ease-in-out 0s;
+    cursor: pointer; }
+    .sub_main .load_more .wrapper_btn:hover {
+      background: #2E2E2E;
+      color: #fff; }
