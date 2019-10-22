@@ -12,6 +12,9 @@
             height: 380px;
             position: absolute;
             opacity: 0.8;
+            @media only screen and (max-width:1024px) {
+                right: 5px;
+            }
             form{
                 padding: 30px;
                 .input_wrapper{
@@ -69,6 +72,9 @@
         .item_gallery{
             grid-column: 4 span;
             width: 100%;
+            @media only screen and (max-width:480px) {
+                grid-column: 12 span;
+            }
             .box_gallery_slider{
                 background: #fff;
                 padding: 10px;
@@ -84,18 +90,24 @@
                 .slider_nav{
                     .item_slider_nav{
                         .box_img_slider{
+                            padding-right: 5px;
                             img{
-                                height: 90px;
-                                width: 111px;
+                                width: 100%;
                             }
                         }
                     }
                     .slick-prev{
                         right: 30px;
                         left: auto;
+                        @media only screen and (max-width: 576px) {
+                            right: 40px;
+                        }
                     }
                     .slick-next{
                         right: -10px;
+                        @media only screen and (max-width: 576px) {
+                            right: 0;
+                        }
                     }
                     .slick-prev,.slick-next{
                         background-color: $color_grey_light ;
@@ -133,6 +145,9 @@
         background-repeat: no-repeat;
         display: flex;
         align-items: center;
+        @media only screen and (max-width: 576px) {
+            height: 200px;
+        }
         .step_regis{
             position: relative;
             &::before{
@@ -160,11 +175,39 @@
                     border-radius: 50%;
                     background: $color_white;
                     opacity: 1;
+                    @media only screen and (max-width: 1024px) {
+                        width: 130px;
+                        height: 130px;
+                    }
+                    @media only screen and (max-width: 768px) {
+                        width: 125px;
+                        height: 125px;
+                    }
+                    @media only screen and (max-width: 576px) {
+                        width: 50px;
+                        height: 50px;
+                    }
                     img{
                         width: 58px;
                         height: 58px;
                         margin: 0 auto;
                         margin-bottom: 5px;
+                        @media only screen and (max-width: 768px) {
+                            width: 40px;
+                            height: 40px;
+                            margin-bottom: 10px;
+                        }
+                        @media only screen and (max-width: 576px) {
+                            width: 20px;
+                            height: 20px;
+                            margin-bottom: 5px;
+                        }
+                    }
+                    span{
+                        font-size: $font_size_A;
+                        @media only screen and (max-width: 576px) {
+                            font-size: 10px;
+                        }
                     }
                 }
             }
@@ -190,6 +233,16 @@
                     margin: 0 auto;
                     object-fit: cover;
                 }
+            }
+        }
+        .slick-next{
+            @media only screen and (max-width: 1024px) {
+                right: 0;
+            }
+        }
+        .slick-prev{
+            @media only screen and (max-width: 1024px) {
+                left: 0;
             }
         }
         .slick-next,.slick-prev{

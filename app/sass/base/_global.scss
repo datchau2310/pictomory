@@ -7,10 +7,19 @@
     @media only screen and (max-width: 1024px) {
         max-width: 970px;
     }
+    @media only screen and (max-width: 768px) {
+        max-width: 720px;
+    }
+    @media only screen and (max-width: 576px) {
+        max-width: 540px;
+    }
 }
 .section_page{
     padding: 50px 0;
     background: $color_grey_light;
+    @media only screen and (max-width: 576px) {
+        padding: 25px 0;
+    }
 }
 .section_title{
     text-align: center;
@@ -19,6 +28,9 @@
         margin-bottom: 15px;
         font-size: $font_size_E;
         font-weight: $fontWeight_title;
+        @media only screen and (max-width: 576px) {
+            font-size: $font_size_C;
+        }
     }
     .icon_title{
         text-align: center;
@@ -57,7 +69,7 @@
         }
         .rate {
             float: left;
-            height: 46px;
+            height: 30px;
             &:not(:checked) {
                 > input {
                     position: absolute;
