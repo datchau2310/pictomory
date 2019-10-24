@@ -1,0 +1,165 @@
+.page_register{
+    background: $color_white;
+    .register_wp{
+        padding: 30px 140px;
+        .form_title{
+            padding: 15px 0;
+            h4{
+                font-size: $font_size_C;
+                a{
+                    color: $color_blue;
+                    &:hover{
+                        color: $color_black;
+                    }
+                }
+            }
+        }
+        form{
+            .form_wp_register{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-gap: 30px;
+                transition: all .3s ease-in-out 0s;
+                align-items: center;
+                .input_wp{
+                    display: flex;
+                    flex-direction: column;
+                    grid-column: 6 span;
+                    width: 100%;
+                    .box_input{
+                        display: grid;
+                        grid-template-columns: repeat(6, 1fr);
+                        grid-gap: 10px;
+                        transition: all .3s ease-in-out 0s;
+                        align-items: center;
+                       .box_register_item_left{
+                            display: flex;
+                            flex-direction: column;
+                            grid-column: 2 span;
+                            width: 100%;
+                            text-align: left;
+                            label{
+                                font-size: $font_size_A;
+                                font-weight: 500;
+                                padding-bottom: 0;
+                                text-align: right;
+                            }
+                       }
+                       .box_register_item_right{
+                            display: flex;
+                            flex-direction: column;
+                            grid-column: 4 span;
+                            width: 100%;
+                            text-align: left;
+                            p{
+                                line-height: 20px;
+                                font-size: $font_size_A;
+                                color: $color_grey;
+                            }
+                            .input_date_time{
+                                width: 50%;
+                            }
+                        }
+                        .radio_wp{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            .radio_checkbox{
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                cursor: pointer;
+                                min-width: 25%;
+                                label{
+                                    padding-bottom: 0;
+                                    padding-left: .5em;
+                                    font-size: $font_size_A;
+                                    font-weight: 500;
+                                    color: $color_brown;
+                                }
+
+                                .input_action{
+                                    height: 100%;
+                                    cursor: pointer;
+                                    align-items: center;
+                                    position: relative;
+                                    margin-right: 50px;
+                                    margin-bottom: 0;
+                                    display: none;
+                                    &:checked~.checkmark_action {
+                                        border: 2px solid $color_brown;
+                                        &::before{
+                                            visibility: visible;
+                                        }
+                                        &:after {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                                .checkmark_action {
+                                    position: relative;
+                                    display: block;
+                                    width: 18px;
+                                    height: 18px;
+                                    flex: 0 0 18px;
+                                    border: 1px solid $color_brown;
+                                    border-radius: 50%;
+                                    -webkit-border-radius: 50%;
+                                    -moz-border-radius: 50%;
+                                    -ms-border-radius: 50%;
+                                    -o-border-radius: 50%;
+                                    margin: 0;
+                                    &::before{
+                                        position: absolute;
+                                        content: "";
+                                        border-radius: 50%;
+                                        -webkit-border-radius: 50%;
+                                        -moz-border-radius: 50%;
+                                        -ms-border-radius: 50%;
+                                        -o-border-radius: 50%;
+                                        top: 50%;
+                                        left: 50%;
+                                        width: 70%;
+                                        height: 70%;
+                                        background: $color_brown;
+                                        visibility: hidden;
+                                        transform: translate3d(-50%,-50%,0);
+                                        -moz-transform: translate3d(-50%,-50%,0);
+                                        -ms-transform: translate3d(-50%,-50%,0);
+                                        -o-transform: translate3d(-50%,-50%,0);
+                                    }
+                                    &::after{
+                                        height: 40px;
+                                        width: 40px;
+                                        left: calc(50% - 20px);
+                                        top: calc(50% - 20px);
+                                        margin: auto;
+                                        background: #0099ff17;
+                                        z-index: -1;
+                                        opacity: 0;
+                                        pointer-events: none;
+                                        transition: all .5s ease-in-out 0s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .btn_wp{
+                text-align: center;
+                padding: 30px;
+                .btn_cancel{
+                    @include btn01();  
+                    margin: 0 5px;
+                }
+                .btn_save{
+                    @include btn02(); 
+                    margin: 0 5px;
+                }
+            }
+        }
+       
+    }
+}

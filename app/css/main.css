@@ -95,7 +95,7 @@ select {
   border: none;
   cursor: pointer; }
   .btn_search:hover {
-    background: #00AEF0; }
+    background: #9B9494; }
 
 .icon_calendar {
   background: url("../../images/icon/date_time.png"); }
@@ -670,3 +670,158 @@ select {
     .sub_main .load_more .wrapper_btn:hover {
       background: #2E2E2E;
       color: #fff; }
+
+.page_register {
+  background: #fff; }
+  .page_register .register_wp {
+    padding: 30px 140px; }
+    .page_register .register_wp .form_title {
+      padding: 15px 0; }
+      .page_register .register_wp .form_title h4 {
+        font-size: 18px; }
+        .page_register .register_wp .form_title h4 a {
+          color: #00AEF0; }
+          .page_register .register_wp .form_title h4 a:hover {
+            color: #2E2E2E; }
+    .page_register .register_wp form .form_wp_register {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 30px;
+      transition: all .3s ease-in-out 0s;
+      align-items: center; }
+      .page_register .register_wp form .form_wp_register .input_wp {
+        display: flex;
+        flex-direction: column;
+        grid-column: 6 span;
+        width: 100%; }
+        .page_register .register_wp form .form_wp_register .input_wp .box_input {
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          grid-gap: 10px;
+          transition: all .3s ease-in-out 0s;
+          align-items: center; }
+          .page_register .register_wp form .form_wp_register .input_wp .box_input .box_register_item_left {
+            display: flex;
+            flex-direction: column;
+            grid-column: 2 span;
+            width: 100%;
+            text-align: left; }
+            .page_register .register_wp form .form_wp_register .input_wp .box_input .box_register_item_left label {
+              font-size: 14px;
+              font-weight: 500;
+              padding-bottom: 0;
+              text-align: right; }
+          .page_register .register_wp form .form_wp_register .input_wp .box_input .box_register_item_right {
+            display: flex;
+            flex-direction: column;
+            grid-column: 4 span;
+            width: 100%;
+            text-align: left; }
+            .page_register .register_wp form .form_wp_register .input_wp .box_input .box_register_item_right p {
+              line-height: 20px;
+              font-size: 14px;
+              color: #DCDBDB; }
+            .page_register .register_wp form .form_wp_register .input_wp .box_input .box_register_item_right .input_date_time {
+              width: 50%; }
+          .page_register .register_wp form .form_wp_register .input_wp .box_input .radio_wp {
+            display: flex;
+            flex-direction: row;
+            align-items: center; }
+            .page_register .register_wp form .form_wp_register .input_wp .box_input .radio_wp .radio_checkbox {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              cursor: pointer;
+              min-width: 25%; }
+              .page_register .register_wp form .form_wp_register .input_wp .box_input .radio_wp .radio_checkbox label {
+                padding-bottom: 0;
+                padding-left: .5em;
+                font-size: 14px;
+                font-weight: 500;
+                color: #9B9494; }
+              .page_register .register_wp form .form_wp_register .input_wp .box_input .radio_wp .radio_checkbox .input_action {
+                height: 100%;
+                cursor: pointer;
+                align-items: center;
+                position: relative;
+                margin-right: 50px;
+                margin-bottom: 0;
+                display: none; }
+                .page_register .register_wp form .form_wp_register .input_wp .box_input .radio_wp .radio_checkbox .input_action:checked ~ .checkmark_action {
+                  border: 2px solid #9B9494; }
+                  .page_register .register_wp form .form_wp_register .input_wp .box_input .radio_wp .radio_checkbox .input_action:checked ~ .checkmark_action::before {
+                    visibility: visible; }
+                  .page_register .register_wp form .form_wp_register .input_wp .box_input .radio_wp .radio_checkbox .input_action:checked ~ .checkmark_action:after {
+                    opacity: 1; }
+              .page_register .register_wp form .form_wp_register .input_wp .box_input .radio_wp .radio_checkbox .checkmark_action {
+                position: relative;
+                display: block;
+                width: 18px;
+                height: 18px;
+                flex: 0 0 18px;
+                border: 1px solid #9B9494;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                margin: 0; }
+                .page_register .register_wp form .form_wp_register .input_wp .box_input .radio_wp .radio_checkbox .checkmark_action::before {
+                  position: absolute;
+                  content: "";
+                  border-radius: 50%;
+                  -webkit-border-radius: 50%;
+                  -moz-border-radius: 50%;
+                  -ms-border-radius: 50%;
+                  -o-border-radius: 50%;
+                  top: 50%;
+                  left: 50%;
+                  width: 70%;
+                  height: 70%;
+                  background: #9B9494;
+                  visibility: hidden;
+                  transform: translate3d(-50%, -50%, 0);
+                  -moz-transform: translate3d(-50%, -50%, 0);
+                  -ms-transform: translate3d(-50%, -50%, 0);
+                  -o-transform: translate3d(-50%, -50%, 0); }
+                .page_register .register_wp form .form_wp_register .input_wp .box_input .radio_wp .radio_checkbox .checkmark_action::after {
+                  height: 40px;
+                  width: 40px;
+                  left: calc(50% - 20px);
+                  top: calc(50% - 20px);
+                  margin: auto;
+                  background: #0099ff17;
+                  z-index: -1;
+                  opacity: 0;
+                  pointer-events: none;
+                  transition: all .5s ease-in-out 0s; }
+    .page_register .register_wp form .btn_wp {
+      text-align: center;
+      padding: 30px; }
+      .page_register .register_wp form .btn_wp .btn_cancel {
+        padding: 1em 2em;
+        background: #2E2E2E;
+        color: #fff;
+        outline: none;
+        text-decoration: none;
+        border-radius: 3px;
+        transition: all .3s ease-in-out 0s;
+        border: none;
+        cursor: pointer;
+        margin: 0 5px; }
+        .page_register .register_wp form .btn_wp .btn_cancel:hover {
+          background: #9B9494; }
+      .page_register .register_wp form .btn_wp .btn_save {
+        padding: 1em 2em;
+        background: #00AEF0;
+        color: #fff;
+        outline: none;
+        text-decoration: none;
+        border-radius: 3px;
+        transition: all .3s ease-in-out 0s;
+        border: none;
+        cursor: pointer;
+        margin: 0 5px; }
+        .page_register .register_wp form .btn_wp .btn_save:hover {
+          background: #2E2E2E; }

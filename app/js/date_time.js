@@ -1,6 +1,9 @@
 $( function() {
     $( "#datepicker" ).datepicker();
 } );
+$( function() {
+    $( "#datepicker_register" ).datepicker();
+} );
 $('input.timepicker_from').timepicker({
     timeFormat: 'h:mm p',
     interval: 60,
